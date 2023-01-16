@@ -4,6 +4,3 @@ str2 = "School"
 # YOUR CODE GOES HERE. PLEASE REMOVE THIS LINE
 str1 = str1 + " " + str2
 print(f"Welcome to {str1}!")
-
-
-git 
