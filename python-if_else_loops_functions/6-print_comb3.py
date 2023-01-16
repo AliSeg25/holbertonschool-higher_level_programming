@@ -2,9 +2,7 @@
 for i in range(10):
     for j in range(10):
         if i < j:
-            k = str(i) + str(j)
-            h = int(k)
-            if k != "89":
-                print("{:02d}".format(h), end=", ")
+            if i == 8 and j == 9:
+                print("{:d}{:d}".format(i, j))
             else:
-                print("{}".format(h), end=" ")
+                print("{:d}{:d}".format(i, j), end=", ")
