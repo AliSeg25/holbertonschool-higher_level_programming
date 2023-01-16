@@ -5,6 +5,6 @@ for i in range(10):
             k = str(i) + str(j)
             h = int(k)
             if k != "89":
-                print("{}".format(h), end=", ")
+                print("{:02d}".format(h), end=", ")
             else:
                 print("{}".format(h), end=" ")
