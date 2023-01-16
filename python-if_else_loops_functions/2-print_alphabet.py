@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 alphabet = [chr(i) for i in range(97, 123)]
 for lettre in alphabet:
-    print(f"{lettre}", end='')
+    print("{}".format(lettre), end='')
