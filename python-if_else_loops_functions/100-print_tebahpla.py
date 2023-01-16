@@ -4,5 +4,5 @@ for i in range(122, 96, -1):
     lettre = chr(i)
     if maj:
         lettre = lettre.upper()
-    print(lettre, end='')
+    print("{}".format(lettre), end='')
     maj = not maj
