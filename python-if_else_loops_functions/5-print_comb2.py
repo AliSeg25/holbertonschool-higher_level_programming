@@ -5,5 +5,5 @@ for i in range(100):
             print("0{:d}, ".format(i), end="")
         elif i >= 10:
             print("{:d}, ".format(i), end="")
-        else:
-            print(i)
+    else:
+        print(i)
