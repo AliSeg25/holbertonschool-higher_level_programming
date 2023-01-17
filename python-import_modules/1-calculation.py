@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from calculator_1 as calc
+from calculator_1 import calc
 
 a = 10
 b = 5
