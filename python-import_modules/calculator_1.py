@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""""def add(a, b):
+def add(a, b):
     return a + b
 
 def sub(a, b):
@@ -10,7 +10,8 @@ def mul(a, b):
     return a * b
 
 def div(a, b): 
-    return a / b"""
+    return a / b
+"""
 
 class Calculation:
     def add(self, a, b):
@@ -26,3 +27,4 @@ class Calculation:
         return a / b
 
 calc = Calculation()
+"""
