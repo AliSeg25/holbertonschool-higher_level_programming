@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-from calculator_1 import add, sub, mul, div
 import sys
+from calculator_1 import add, sub, mul, div
 
 if __name__ == "__main__":
     argc = len(sys.argv) - 1
 
-    if argc != 3:
+    if argc != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
@@ -24,4 +24,3 @@ if __name__ == "__main__":
         print("{} * {} = {}".format(a, b, mul(a, b)))
     elif sys.argv[2] == "/":
         print("{} / {} = {}".format(a, b, div(a, b)))
-
