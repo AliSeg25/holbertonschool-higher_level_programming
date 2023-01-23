@@ -5,4 +5,3 @@ def simple_delete(a_dictionary, key=""):
         return a_dictionary
     else:
         return a_dictionary
-print(simple_delete({'a': 1, 'b': 2, 'c': 3}, 'f'))
