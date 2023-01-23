@@ -2,8 +2,5 @@
 def weight_average(my_list=[]):
     if my_list == []:
         return 0
-    
-    total = sum([sum(x) for x in my_list])
-    long = sum([len(x) for x in my_list])
-
-    return total / len
+    return sum([x[0] * x[1] for x in my_list]) / sum([x[1] for x in my_list])
+print(weight_average([(1, 2), (2, 1), (3, 10), (4, 2)]))
