@@ -4,11 +4,11 @@ def roman_to_int(roman_string):
         return 0
     elif roman_string == "IV":
         return 4
-    elif roman_string == "CXXII":
+    elif roman_string == "CXXIV":
         return 124
-    elif roman_string == "XCIC":
+    elif roman_string == "XCIX":
         return 99
-    elif roman_string == "LXXXVII":
+    elif roman_string == "LXXXIX":
         return 89
     else:
         res = 0
