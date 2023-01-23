@@ -12,8 +12,10 @@ def roman_to_int(roman_string):
         return 89
     else:
         res = 0
-        dict = {"IV": 4, "I": 1, "V": 5, "X": 10, 
-                "L": 50, "C": 100, "D": 500, "M": 1000}
+        dict = {"IV": 4, "I": 1,
+                "V": 5, "X": 10, 
+                "L": 50, "C": 100, 
+                "D": 500, "M": 1000}
         for i in roman_string:
             for j in dict:
                 if j == i:
