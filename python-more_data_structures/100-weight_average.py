@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 def weight_average(my_list=[]):
-    if my_list == []:
+    if not my_list:
         return 0
-    return sum([x[0] * x[1] for x in my_list]) / sum([x[1] for x in my_list])
-print(weight_average([(1, 2), (2, 1), (3, 10), (4, 2)]))
+    somme_ponderee = 0
+    poids_total = 0
+    for i, j in my_list:
+        somme_ponderee += i * j
+        poids_total += j
+    return somme_ponderee / poids_total
