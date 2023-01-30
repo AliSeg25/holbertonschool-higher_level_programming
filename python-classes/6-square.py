@@ -30,6 +30,8 @@ class Square:
 
     @position.setter
     def position(self, value):
+
+        """Veriification de la valeur"""
         for i in range(len(self.position)):
             if not isinstance(value[i], int):
                 raise TypeError("position must be a tuple of\
