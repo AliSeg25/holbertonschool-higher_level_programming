@@ -3,7 +3,7 @@
 
 
 class Square:
-    """This is the Square class"""
+    """Creation the Class Square that defines a square size private instance"""
 
     def __init__(self, size):
         self.__size = size
