@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""This module contains a class called Square"""
+
+
 class Square:
     """Initialize the square with size """
 
