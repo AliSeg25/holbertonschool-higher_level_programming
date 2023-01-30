@@ -4,7 +4,6 @@
 
 class Square:
     """Define a Square class.
-    
     Args:
         size (int): Size of the square.
 
