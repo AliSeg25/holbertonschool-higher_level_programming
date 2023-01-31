@@ -1,47 +1,79 @@
 #!/usr/bin/python3
-class Square:
-    def __init__(self, size=0, position=(0, 0)):
-        self.size = size
-        self.position = position
+"""Write a class Node that defines a node of a singly linked list by:"""
 
-    @property
-    def size(self):
-        return self.__size
 
-    @size.setter
-    def size(self, value):
-        if not isinstance(value, int):
-            raise TypeError("size must be an integer")
-        if value < 0:
-            raise ValueError("size must be >= 0")
-        self.__size = value
+class Node:
+    """ creation du noeud data """
 
-    @property
-    def position(self):
-        return self.__position
+    def __init__(self, data, next_node=None):
 
-    @position.setter
-    def position(self, value):
-        if not isinstance(value, tuple) or len(value) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if not all(map(lambda x: isinstance(x, int) and x >= 0, value)):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        self.__position = value
-
-    def area(self):
-        return self.size ** 2
-
-    def my_print(self):
-        if self.size == 0:
-            print()
+        if type(data) != int:
+            raise TypeError("data must be an integer")
+        self.__data = data
+        if next_node is None or isinstance(next_node, Node):
+            self.__next_node = next_node
         else:
-            for _ in range(self.position[1]):
-                print()
-            for i in range(self.size):
-                print(" " * self.position[0], end="")
-                print("#" * self.size)
+            raise TypeError("next_node must be a Node object")
 
-try:
-    my_square = Square(3, "Position")
-except Exception as e:
-    print(e)
+    @property
+    def data(self):
+
+        """Return data"""
+        return self.__data
+
+    @data.setter
+    def data(self, value):
+        """Controle value"""
+
+        if type(value) != int:
+            raise TypeError("data must be an integer")
+        self.__data = value
+
+    @property
+    """Return next node"""
+
+    def next_node(self):
+        return self.__next_node
+
+    @next_node.setter
+    def next_node(self, value):
+
+        """controle valeur"""
+        if value is None or isinstance(value, Node):
+            self.__next_node = value
+        else:
+            raise TypeError("next_node must be a Node object")
+
+
+class SinglyLinkedList:
+    """Liste chainer"""
+
+    def __init__(self):
+        self.__head = None
+
+    def sorted_insert(self, value):
+        """incrementation"""
+
+        new_node = Node(value)
+        if self.__head is None:
+            self.__head = new_node
+            return
+        current = self.__head
+        if current.data > value:
+            new_node.next_node = current
+            self.__head = new_node
+            return
+        while current.next_node is not None and current.next_node.data < value:
+            current = current.next_node
+        new_node.next_node = current.next_node
+        current.next_node = new_node
+
+    def __str__(self):
+        """print list"""
+
+        res = []
+        current = self.__head
+        while current:
+            res.append(str(current.data))
+            current = current.next_node
+        return "\n".join(res)
