@@ -11,15 +11,16 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     tab = [".", "?", ":"]
-    words = text.split()
 
-    tabtexte = []
+    tex = []
 
     for i in text:
-        tabtexte.append(i)
-
-    for i in tabtexte:
-        if i in tab:
-            print(i, end="\n\n")
+        tex.append(i)
+   
+    for i in range(len(tex)):
+        if tex[i] in tab:
+            print(tex[i], end="\n\n")
         else:
-            print(i, end="")
+            print(tex[i], end="")
+
+text_indentation("Holberton. School? How are you:    John")
