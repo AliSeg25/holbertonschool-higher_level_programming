@@ -30,9 +30,9 @@ class Node:
         self.__data = value
 
     @property
-    """Return next node"""
-
     def next_node(self):
+        """Return next node"""
+
         return self.__next_node
 
     @next_node.setter
