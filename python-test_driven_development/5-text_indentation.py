@@ -13,9 +13,13 @@ def text_indentation(text):
     tab = [".", "?", ":"]
     words = text.split()
 
-    for i in range(len(words)):
-        word = words[i]
-        if word[-1] in tab:
-            print(word, end="\n\n")
+    tabtexte = []
+
+    for i in text:
+        tabtexte.append(i)
+
+    for i in tabtexte:
+        if i in tab:
+            print(i, end="\n\n")
         else:
-            print(word, end=" ")
+            print(i, end="")
