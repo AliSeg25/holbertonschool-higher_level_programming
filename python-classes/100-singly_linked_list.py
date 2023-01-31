@@ -58,15 +58,15 @@ class SinglyLinkedList:
         if self.__head is None:
             self.__head = new_node
             return
-        current = self.__head
-        if current.data > value:
-            new_node.next_node = current
+        nodetemp = self.__head
+        if nodetemp.data > value:
+            new_node.next_node = nodetemp
             self.__head = new_node
             return
-        while current.next_node is not None and current.next_node.data < value:
-            current = current.next_node
-        new_node.next_node = current.next_node
-        current.next_node = new_node
+        while nodetemp.next_node is not None and nodetemp.next_node.data < value:
+            nodetemp = nodetemp.next_node
+        new_node.next_node = nodetemp.next_node
+        nodetemp.next_node = new_node
 
     def __str__(self):
         """print list"""
