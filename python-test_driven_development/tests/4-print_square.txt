@@ -1,23 +1,36 @@
->>> say_my_name("John", "Doe")
-My name is John Doe
+>>> print_square = __import__('4-print_square').print_square
 
->>> say_my_name("Jane")
-My name is Jane 
+>>> len(__import__("4-print_square").__doc__) > 0
+True
 
->>> say_my_name("", "Doe")
-My name is  Doe
+>>> len(__import__("4-print_square").print_square.__doc__) > 0
+True
 
->>> say_my_name("", "")
-My name is  
+>>> print_square(0)
 
->>> try:
-...     say_my_name(12, "Doe")
-... except Exception as e:
-...     print(e)
-first_name must be a string
+>>> print_square(-3)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
 
->>> try:
-...     say_my_name("John", 12)
-... except Exception as e:
-...     print(e)
-last_name must be a string
+>>> print_square(-3.3)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+>>> print_square(3.4)
+###
+###
+###
+
+>>> print_square(5)
+#####
+#####
+#####
+#####
+#####
+
+>>> print_square("Hello")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
