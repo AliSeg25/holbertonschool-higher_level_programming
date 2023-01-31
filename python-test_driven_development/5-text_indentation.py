@@ -7,13 +7,15 @@ def text_indentation(text):
     prints text followed by 2 new lines after ".", "?", or ":"
     @text: the text to be printed
     """
-    tab = [".", "?", ":"]
-    tabtext = text.split()
+    if type(text) != str:
+        raise TypeError("text must be a string")
 
-    for i in range(len(tabtext)):
-        text2 = tabtext[i]
-        if text2[-1] in tab:
-            print(text2)
-            print("\n")
+    tab = [".", "?", ":"]
+    words = text.split()
+
+    for i in range(len(words)):
+        word = words[i]
+        if word[-1] in tab:
+            print(word, end="\n\n")
         else:
-            print(text2, end=" ")
+            print(word, end=" ")
