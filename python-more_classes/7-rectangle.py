@@ -72,8 +72,8 @@ class Rectangle:
         else:
             Rec = ""
             for i in range(self.__height):
-                Rec += Rectangle.print_symbol * self.__width + "\n"\
-                    if i < self.height - 1 else Rectangle.print_symbol * self.__width
+                Rec += str(self.print_symbol) * self.__width + "\n"\
+                    if i < self.height - 1 else str(self.print_symbol) * self.__width
             return Rec
 
     def __repr__(self):
@@ -85,3 +85,28 @@ class Rectangle:
         """Message to god"""
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
+        
+my_rectangle_1 = Rectangle(8, 4)
+print(my_rectangle_1)
+print("--")
+my_rectangle_1.print_symbol = "&"
+print(my_rectangle_1)
+print("--")
+
+my_rectangle_2 = Rectangle(2, 1)
+print(my_rectangle_2)
+print("--")
+Rectangle.print_symbol = "C"
+print(my_rectangle_2)
+print("--")
+
+my_rectangle_3 = Rectangle(7, 3)
+print(my_rectangle_3)
+
+print("--")
+
+my_rectangle_3.print_symbol = ["C", "is", "fun!"]
+print(my_rectangle_3)
+
+print("--")
+
