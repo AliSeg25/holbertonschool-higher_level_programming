@@ -99,3 +99,8 @@ class Rectangle:
         """methode repr"""
 
         return "Rectangle({}, {})".format(self.width, self.height)
+
+    def __del__(self):
+        """Message to god"""
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")
