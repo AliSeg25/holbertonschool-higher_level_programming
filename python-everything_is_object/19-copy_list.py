@@ -3,7 +3,5 @@
 
 
 def copy_list(a_list):
-    """Retrun copy list"""
-
     a_list2 = a_list[:]
     return a_list2
