@@ -1,34 +1,15 @@
 #!/usr/bin/python3
-"""5. Geometry module"""
+"""Geometry module"""
 
 
-class BaseGeometry:
-    """class empty"""
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-    def area(self):
-        """Raises an exception"""
-        raise Exception('area() is not implemented')
-
-    def integer_validator(self, name, value):
-        """Fonction Raises an exception"""
-
-        if not type(value) is int:
-            raise TypeError('{} must be an integer'.format(name))
-        if value <= 0:
-            raise ValueError('{} must be greater than 0'.format(name))
 
 class Rectangle(BaseGeometry):
     """class rectancle inherits basegeometry"""
 
-
     def __init__(self, width, height):
-        self.width = width
-        self.height = height
-
-        @property
-        def width(self):
-            return self.__width
-        
-        @property
-        def height(self):
-            return height.__width
+        self.integer_validator("width", width)
+        self.integer_validator("height", height)
+        self.__width = width
+        self.__height = height
