@@ -21,10 +21,6 @@ True
 >>> my_list.print_sorted()
 ['H', 'b', 'e', 'l', 'n', 'o', 'o', 'r', 't']
 
->>> my_list = MyList('Holberton')
->>> my_list.print_sorted()
-['H', 'b', 'e', 'l', 'n', 'o', 'o', 'r', 't']
-
 >>> my_list = MyList()
 >>> my_list.append(1)
 >>> my_list.append(4)
