@@ -1,9 +1,9 @@
-l1 = [1, 2, 3]
-l2 = l1
-l1 = l1 + [4]
-print(l2)
+#!/usr/bin/python3
+"""Function copy_list"""
 
-l1 = [1, 2, 3]
-l2 = l1
-l1.append(4)
-print(l2)
+
+def copy_list(a_list):
+    """Retrun copy list"""
+
+    a_list2 = a_list[:]
+    return a_list2
