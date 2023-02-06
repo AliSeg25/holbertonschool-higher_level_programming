@@ -1,0 +1,22 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> len(__import__("1-my_list").__doc__) > 0
+True
+
+>>> len(__import__("1-my_list").MyList.__doc__) > 0
+True
+
+>>> len(__import__("1-my_list").MyList.print_sorted.__doc__) > 0
+True
+
+>>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+
+>>> my_list = MyList('a')
+>>> my_list.print_sorted()
+['a']
+
+>>> my_list = MyList('Holberton')
+>>> my_list.print_sorted()
+['H', 'b', 'e', 'l', 'n', 'o', 'o', 'r', 't']
