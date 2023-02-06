@@ -5,8 +5,7 @@
 def is_same_class(obj, a_class):
     """Return True type(obj) ==  a_class"""
 
-    try :
-        if type(obj) is a_class:
-            return True
-    except:
-            return False
+    if type(obj) is a_class:
+        return True
+    else:
+        return False
