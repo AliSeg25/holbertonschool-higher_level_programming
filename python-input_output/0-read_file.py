@@ -6,6 +6,5 @@ def read_file(filename=""):
     """Open file simple reading"""
 
     with open(filename, "r") as f:
-        for ligne in f
-        #fichier = f.read()
+        for ligne in f:
             print(ligne)
