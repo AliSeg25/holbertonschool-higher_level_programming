@@ -9,8 +9,8 @@ import sys
 file = "add_item.json"
 
 arg = sys.argv[1:]
-datajson = load_from_json_file(arg)
+json = load_from_json_file(arg)
 with open(file, "w") as file:
-    file.write(datajson)
+    file.write(json)
 
-print(datajson)
+print(json)
