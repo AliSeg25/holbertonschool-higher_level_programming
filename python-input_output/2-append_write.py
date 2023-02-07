@@ -6,5 +6,5 @@ def append_write(filename="", text=""):
     """write the end file"""
 
     with open(filename, "a") as fichier:
-        fichier.write("\n", text)
-        return text
+        fichier.write(text)
+        return len(text)
