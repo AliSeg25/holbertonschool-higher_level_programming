@@ -10,7 +10,7 @@ def save_to_json_file(my_obj, filename):
     try:
             data = json.dumps(my_obj)
     except:
-        raise PermissionError("[Errno 13] Permission denied: '{:}'".format(filename))
+        raise PermissionError("[TypeError] Object of type set is not JSON serializable")
     try:
         with open(filename, "w") as fichier:
             fichier.write(data)
