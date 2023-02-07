@@ -10,10 +10,8 @@ file = "add_item.json"
 arg = sys.argv[1:]
 
 try:
-    obj = load_from_json_file(file)
+    liste = load_from_json_file(file)
+    liste =+ arg
 except:
-    obj = [] 
+    pass
 
-
-obj += arg
-save_to_json_file(obj, file)
