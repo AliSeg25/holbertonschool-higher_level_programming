@@ -12,7 +12,7 @@ class Student:
 
     def to_json(self, attrs=None):
         """return dict instance"""
-    
+
         if isinstance(attrs, list):
             dict = {}
             for key, value in self.__dict__.items():
