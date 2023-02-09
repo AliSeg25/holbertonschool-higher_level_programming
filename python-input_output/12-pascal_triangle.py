@@ -9,7 +9,7 @@ def pascal_triangle(n):
     if n <= 0:
         return triangle
 
-    for i in range(n -1):
+    for i in range(n):
 
         if i == 0:
             triangle.append([1])
@@ -24,3 +24,14 @@ def pascal_triangle(n):
         
             triangle.append(liste)
     return triangle
+
+def print_triangle(triangle):
+    """
+    Print triangle (2D array)
+    """
+    for row in triangle:
+        print("[{}]".format(",".join([str(x) for x in row])))
+
+
+if __name__ == "__main__":
+    print_triangle(pascal_triangle(5))
