@@ -3,7 +3,9 @@
 
 
 class Base:
+    """Class the Base de notre programme"""
     __nb_objects = 0
+
     def __init__(self, id=None):
         if not id == None:
             self.id = id
