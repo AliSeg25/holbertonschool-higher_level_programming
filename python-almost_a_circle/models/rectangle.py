@@ -15,7 +15,6 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id=id)
 
-
     @property
     def width(self):
         """Property"""
