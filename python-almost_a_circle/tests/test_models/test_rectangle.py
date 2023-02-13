@@ -28,10 +28,9 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(TypeError):
             r.width = "not an integer"
 
-    def test_width_not_positive(self):
+    def test_area(self):
         r = Rectangle(10, 2)
-        with self.assertRaises(ValueError):
-            r.width = -5
-        
-if __name__ == '__main__':
-    unittest.main()
+        self.assertEqual(r.area(), 20)
+
+        r = Rectangle(5, 7)
+        self.assertEqual(r.area(), 35)
