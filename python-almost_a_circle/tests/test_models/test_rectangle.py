@@ -52,3 +52,8 @@ class TestRectangle(unittest.TestCase):
             r2.display()
             result = buffer.getvalue()
         self.assertEqual(result, expected_output)
+
+        def test_str(self):
+            r = Rectangle(14, 16, 12, 15, 25)
+            self.assertEqual(str(r), "[Rectangle] (25) 12/15 - 14/16")
+
