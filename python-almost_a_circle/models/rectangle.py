@@ -129,7 +129,7 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
-        
+
         def test_update_kwargs(self):
             r = Rectangle(10, 10, 10, 10, 1)
             r.update(id=2, width=5, height=5, x=1, y=1)
