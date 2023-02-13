@@ -2,7 +2,7 @@
 """Class Square"""
 
 
-from .rectangle import Rectangle
+from rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -26,7 +26,7 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
-        """Update args"""
+        """Update args""" 
 
         if args:
             if len(args) > 0:
@@ -34,11 +34,9 @@ class Square(Rectangle):
             if len(args) > 1:
                 self.width = args[1]
             if len(args) > 2:
-                self.height = args[2]
+                self._Rectangle__x = args[2]
             if len(args) > 3:
-                self.x = args[3]
-            if len(args) > 4:
-                self.y = args[4]
+                self._Rectangle__y = args[3]
 
         else:
             for key, value in kwargs.items():
