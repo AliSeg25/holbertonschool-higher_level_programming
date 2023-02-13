@@ -104,7 +104,7 @@ class Rectangle(Base):
             self.id, self.x, self.y, self.width, self.height)
 
     def display(self):
-        es = " "
-        a = "#"
+        """Recatngle # et ' '"""
+
         for i in range(self.height):
-            print(es*self.x, a*self.width)
+            print(" "*self.x, "#"*self.width)
