@@ -56,3 +56,13 @@ class TestRectangle(unittest.TestCase):
         def test_str(self):
             r = Rectangle(14, 16, 12, 15, 25)
             self.assertEqual(str(r), "[Rectangle] (25) 12/15 - 14/16")
+
+        
+        def test_update(self):
+            r = Rectangle(1, 2, 3, 4, 5)
+            r.update(10, 20, 30, 40, 50)
+            self.assertEqual(r.id, 10)
+            self.assertEqual(r.width, 20)
+            self.assertEqual(r.height, 30)
+            self.assertEqual(r.x, 40)
+            self.assertEqual(r.y, 50)
