@@ -140,4 +140,5 @@ class Rectangle(Base):
             self.assertEqual(r.y, 1)
 
     def to_dictionary(self):
+        """Returns the dictionary representation of the square instance"""
         return self.__dict__
