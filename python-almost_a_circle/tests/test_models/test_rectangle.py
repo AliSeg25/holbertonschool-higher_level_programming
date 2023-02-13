@@ -4,8 +4,6 @@ from models.rectangle import Rectangle
 from models.base import Base
 from io import StringIO
 from contextlib import redirect_stdout
-#import models.rectangle
-#import models.base
 
 
 #Base = __import__('models.base').Base
