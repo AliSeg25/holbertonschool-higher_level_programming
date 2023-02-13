@@ -2,14 +2,11 @@
 """Class Rectangle"""
 
 
-#from models.base import Base
-
 Base = __import__('base').Base
 
 
-
 class Rectangle(Base):
-    """Class rertagle qui herite de la class base"""
+    """Class retangle qui herite de la class base"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
         self.width = width
