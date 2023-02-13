@@ -2,7 +2,7 @@
 """Class Rectangle"""
 
 
-from .base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -138,3 +138,6 @@ class Rectangle(Base):
             self.assertEqual(r.height, 5)
             self.assertEqual(r.x, 1)
             self.assertEqual(r.y, 1)
+
+    def to_dictionary(self):
+        return self.__dict__
