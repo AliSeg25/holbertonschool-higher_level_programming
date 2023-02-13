@@ -1,4 +1,5 @@
 import unittest
+import models.rectangle
 from models.rectangle import addition
 
 class TestAddition(unittest.TestCase):
