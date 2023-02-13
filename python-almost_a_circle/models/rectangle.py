@@ -2,7 +2,7 @@
 """Class Rectangle"""
 
 
-from .base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -104,7 +104,9 @@ class Rectangle(Base):
             self.id, self.x, self.y, self.width, self.height)
 
     def display(self):
-        """Recatngle # et ' '"""
+        """Recatngle # et"""
 
+        for i in range(self.y):
+            print("")
         for i in range(self.height):
-            print(" "*self.x, "#"*self.width)
+            print(" "*self.x + "#"*self.width)
