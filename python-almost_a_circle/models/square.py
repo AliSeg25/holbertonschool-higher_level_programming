@@ -2,7 +2,7 @@
 """Class Square"""
 
 
-from rectangle import Rectangle
+from .rectangle import Rectangle
 
 
 class Square(Rectangle):
@@ -20,5 +20,7 @@ class Square(Rectangle):
 
     @size.setter
     def size(self, value):
+        """ La meme valeur """
+
         self.width = value
         self.height = value
