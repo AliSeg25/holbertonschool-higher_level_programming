@@ -62,7 +62,7 @@ class TestRectangle(unittest.TestCase):
             self.assertEqual(r.height, 30)
             self.assertEqual(r.x, 40)
             self.assertEqual(r.y, 50)
-    """
+
     def test_load_from_file(self):
 
         file_path = "Rectangle.json"
@@ -90,4 +90,3 @@ class TestRectangle(unittest.TestCase):
             self.assertEqual(rect1, rect2)
 
         os.remove(file_path)
-    """
