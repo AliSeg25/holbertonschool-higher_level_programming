@@ -48,13 +48,16 @@ class Base:
         try:
             with open(file_name, "r") as file:
                 file = file.read()
-        except FileExistsError:
+        except FileNotFoundError:
             return []
+
         liste_json = cls.from_json_string(file)
         liste_instance = []
+
         for el in liste_json:
             instance = cls.create(**el)
             liste_instance.append(instance)
+
         return liste_instance
 
 
