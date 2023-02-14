@@ -130,15 +130,6 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 setattr(self, key, value)
 
-        def test_update_kwargs(self):
-            r = Rectangle(10, 10, 10, 10, 1)
-            r.update(id=2, width=5, height=5, x=1, y=1)
-            self.assertEqual(r.id, 2)
-            self.assertEqual(r.width, 5)
-            self.assertEqual(r.height, 5)
-            self.assertEqual(r.x, 1)
-            self.assertEqual(r.y, 1)
-
     def to_dictionary(self):
         """Returns the dictionary representation of the square instance"""
 
