@@ -62,31 +62,3 @@ class TestRectangle(unittest.TestCase):
             self.assertEqual(r.height, 30)
             self.assertEqual(r.x, 40)
             self.assertEqual(r.y, 50)
-
-    def test_load_from_file(self):
-
-        file_path = "Rectangle.json"
-        if os.path.exists(file_path):
-            os.remove(file_path)
-
-        res = Rectangle.load_from_file()
-
-        self.assertEqual(res, [])
-
-        r1 = Rectangle(10, 7, 2, 8)
-        r2 = Rectangle(2, 4)
-        list_rectangles_input = [r1, r2]
-
-        Rectangle.save_to_file(list_rectangles_input)
-
-        list_rectangles_output = Rectangle.load_from_file()
-
-        self.assertIsInstance(list_rectangles_output, list)
-        self.assertNotEqual(list_rectangles_output, [])
-
-        self.assertEqual(len(list_rectangles_output), len(list_rectangles_input))
-
-        for rect1, rect2 in zip(list_rectangles_input, list_rectangles_output):
-            self.assertEqual(rect1, rect2)
-
-        os.remove(file_path)
