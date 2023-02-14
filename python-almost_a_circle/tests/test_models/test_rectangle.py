@@ -49,12 +49,12 @@ class TestRectangle(unittest.TestCase):
             result = buffer.getvalue()
         self.assertEqual(result, expected_output)
 
-        def test_str(self):
+    def test_str(self):
             r = Rectangle(14, 16, 12, 15, 25)
             self.assertEqual(str(r), "[Rectangle] (25) 12/15 - 14/16")
 
         
-        def test_update(self):
+    def test_update(self):
             r = Rectangle(1, 2, 3, 4, 5)
             r.update(10, 20, 30, 40, 50)
             self.assertEqual(r.id, 10)
@@ -62,3 +62,32 @@ class TestRectangle(unittest.TestCase):
             self.assertEqual(r.height, 30)
             self.assertEqual(r.x, 40)
             self.assertEqual(r.y, 50)
+    """
+    def test_load_from_file(self):
+
+        file_path = "Rectangle.json"
+        if os.path.exists(file_path):
+            os.remove(file_path)
+
+        res = Rectangle.load_from_file()
+
+        self.assertEqual(res, [])
+
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        list_rectangles_input = [r1, r2]
+
+        Rectangle.save_to_file(list_rectangles_input)
+
+        list_rectangles_output = Rectangle.load_from_file()
+
+        self.assertIsInstance(list_rectangles_output, list)
+        self.assertNotEqual(list_rectangles_output, [])
+
+        self.assertEqual(len(list_rectangles_output), len(list_rectangles_input))
+
+        for rect1, rect2 in zip(list_rectangles_input, list_rectangles_output):
+            self.assertEqual(rect1, rect2)
+
+        os.remove(file_path)
+    """
