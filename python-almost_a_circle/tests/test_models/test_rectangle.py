@@ -2,12 +2,10 @@ import unittest
 
 from models.rectangle import Rectangle
 from models.base import Base
+
 from io import StringIO
 from contextlib import redirect_stdout
 
-
-#Base = __import__('models.base').Base
-#Rectancle = __import__('models.rectangle').Rectangle
 
 class TestRectangle(unittest.TestCase):
     def test_init(self):
