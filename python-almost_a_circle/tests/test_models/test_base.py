@@ -61,6 +61,17 @@ class TestBase(unittest.TestCase):
         json_list_input = Rectangle.to_json_string(list_input)
         list_output = Rectangle.from_json_string(json_list_input)
         self.assertEqual(list_output, list_input)
+    
+    def test_load_from_file(self):
+        """ Test load_from_file method """
+        r1 = Rectangle(10, 7, 2, 8)
+        r2 = Rectangle(2, 4)
+        list_rectangles = [r1, r2]
+        Rectangle.save_to_file(list_rectangles)
+        loaded_rectangles = Rectangle.load_from_file()
+        self.assertEqual(len(list_rectangles), len(loaded_rectangles))
+        for r in loaded_rectangles:
+            self.assertIsInstance(r, Rectangle)
 
 if __name__ == '__main__':
     unittest.main()

@@ -32,14 +32,7 @@ class Base:
             dic = []
         with open(file_name, "w") as file:
             file.write(cls.to_json_string(dic))
-
-    def __init__(self, id=None):
-        if id is not None:
-            self.id = id
-        else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
-
+    
     @classmethod
     def create(cls, **dictionary):
         if cls.__name__ == "Rectangle":
@@ -48,3 +41,29 @@ class Base:
             instance = cls(1)
         instance.update(**dictionary)
         return instance
+    
+    @classmethod
+    def load_from_file(cls):
+        file_name = cls.__name__ + ".json"
+        try:
+            with open(file_name, "r") as file:
+                file = file.read()
+        except FileExistsError:
+                return []
+        liste_json = cls.from_json_string(file)
+        liste_instance = []
+        for el in liste_json:
+            instance = cls.create(**el)
+            liste_instance.append(instance)
+        return liste_instance
+
+
+    def __init__(self, id=None):
+        if id is not None:
+            self.id = id
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
+    
+
+
