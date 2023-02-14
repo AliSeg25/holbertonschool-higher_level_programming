@@ -32,7 +32,7 @@ class Base:
             dic = []
         with open(file_name, "w") as file:
             file.write(cls.to_json_string(dic))
-    
+
     @classmethod
     def create(cls, **dictionary):
         if cls.__name__ == "Rectangle":
@@ -41,7 +41,7 @@ class Base:
             instance = cls(1)
         instance.update(**dictionary)
         return instance
-    
+
     @classmethod
     def load_from_file(cls):
         file_name = cls.__name__ + ".json"
@@ -49,7 +49,7 @@ class Base:
             with open(file_name, "r") as file:
                 file = file.read()
         except FileExistsError:
-                return []
+            return []
         liste_json = cls.from_json_string(file)
         liste_instance = []
         for el in liste_json:
