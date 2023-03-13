@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Lists all states from the database hbtn_0e_0_usa sorted in ascending order by states.id
+Lists all states from the database hbtn_0e_0_usa sorted in ascending
 """
 import MySQLdb
 import sys
@@ -22,7 +22,7 @@ if __name__ == "__main__":
     # Create a cursor object allows to execute
     cursor = db.cursor()
 
-    #Cette ligne exécute une requête SQL qui sélectionne
+    # Cette ligne exécute une requête SQL qui sélectionne
     # toutes les lignes de la table "states" dans la base de données
     # triées par ordre croissant de leur id.
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
