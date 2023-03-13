@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 """
 Lists all states from the database hbtn_0e_0_usa sorted in ascending order by states.id
@@ -38,3 +38,4 @@ if __name__ == "__main__":
     # Close cursor and database
     cursor.close()
     db.close()
+
