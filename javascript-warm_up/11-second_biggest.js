@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const args = process.argv.slice(2);
-let tab = [];
+const tab = [];
 
 if (args.length === 0 || args.length === 1) {
   console.log(0);
